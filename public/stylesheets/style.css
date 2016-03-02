@@ -1,5 +1,9 @@
 html, body {
   height: 100%;
+  padding-top: 50px;
+  background: #FF8008; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #FF8008 , #FFC837); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #FF8008 , #FFC837); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 img {
   margin: 0 auto;
@@ -11,4 +15,13 @@ img {
 .footer{
   height: 40px;
   text-align: center;
+}
+.page-content, .jumbotron {
+  background-color: white;
+}
+.thumbnail {
+  background-color: ivory;
+}
+#code-show {
+  display: none;
 }

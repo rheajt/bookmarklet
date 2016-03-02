@@ -1,6 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  a(href="/attendance") attendance
+  .container
+    .jumbotron
+      h1.text-center= title
+
+      .row
+        .col-sm-4
+          .thumbnail.page-content
+            a(href="/attendance")
+              img(src="images/ClassDojo.jpg").img-responsive.img-rounded
+              h2.text-center ClassDojo Attendance

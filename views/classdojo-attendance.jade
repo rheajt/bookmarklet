@@ -2,34 +2,32 @@ extends layout.jade
 
 block content
   .container
-    .row
+    .row.page-content
       .col-xs-4
         img.img-responsive(src='http://www.teachingace.com/wp-content/uploads/2013/08/DOjo.jpg', alt='')
       .col-xs-8
         h1.text-center Bookmarklet Generator
-        h4
-          | This is the
-          a(href='https://gist.github.com/rheajt/7011372e945c25393e7a') second iteration of a bookmarklet
-          |  I wrote a few months ago using jQuery and a bookmarklet generator. I wanted to remove the jQuery/generator dependance from the equation. Now you just need to:
+        h4.
+          This is the #[a(href='https://gist.github.com/rheajt/7011372e945c25393e7a') second iteration of a bookmarklet] I wrote a few months ago using jQuery and a bookmarklet generator. I wanted to remove the jQuery/generator dependance from the equation. Now you just need to:
         ol
-          li
-            | enter the email of whoever does the attendance at your school along with your own email for record keeping.
-          li
-            | The code will be generated below! Drag the button onto your bookmarks bar, or copy and paste the code into a new bookmark.
-    form.form-horizontal
-      .form-group
-        label.col-xs-4 Send attendance to:
-        .col-xs-8
-          input#emailto.form-control(type='email')
-      .form-group
-        label.col-xs-4 Your email address for record keeping:
-        .col-xs-8
-          input#youremail.form-control(type='email')
-      .form-group
-        .col-xs-offset-4.col-xs-8
-          button.btn.btn-primary(type='submit') Submit
-    .row
-      #code-show.col-xs-12(style='display:none')
+          li.
+            Enter the email of whoever does the attendance at your school along with your own email for record keeping.
+          li.
+            The code will be generated below! Drag the button onto your bookmarks bar, or copy and paste the code into a new bookmark.
+      .col-xs-8.col-xs-offset-4
+        form.form-horizontal
+          .form-group
+            label.col-xs-4 Send attendance to:
+            .col-xs-4
+              input#emailto.form-control(type='email')
+          .form-group
+            label.col-xs-4 Your email address for record keeping:
+            .col-xs-4
+              input#youremail.form-control(type='email')
+          .form-group
+            .col-xs-offset-4.col-xs-8
+              button.btn.btn-primary(type='submit') Submit
+      .col-xs-12#code-show
         h4
           | The codes generated below will automatically generate an email in your default email provider with the absent/late students already typed and ready to send.
         ul.nav.nav-tabs.nav-justified
