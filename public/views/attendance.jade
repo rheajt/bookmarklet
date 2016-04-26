@@ -1,34 +1,33 @@
 extends layout.jade
 
 block content
-  .container
+  .jumbotron
     .row.page-content
       .col-xs-4
         img.img-responsive(src='http://www.teachingace.com/wp-content/uploads/2013/08/DOjo.jpg', alt='')
       .col-xs-8
-        h1.text-center Bookmarklet Generator
-        h4.
-          This is the #[a(href='https://gist.github.com/rheajt/7011372e945c25393e7a') second iteration of a bookmarklet] I wrote a few months ago using jQuery and a bookmarklet generator. I wanted to remove the jQuery/generator dependance from the equation. Now you just need to:
+        h1.text-default ClassDojo Attendance
+        h5.
+          This is the #[a(href='https://gist.github.com/rheajt/7011372e945c25393e7a', target="_blank").text-primary second iteration of a bookmarklet] I wrote a few months ago using jQuery and a bookmarklet generator. I wanted to remove the jQuery/generator dependance from the equation. Now you just need to:
         ol
           li.
             Enter the email of whoever does the attendance at your school along with your own email for record keeping.
           li.
             The code will be generated below! Drag the button onto your bookmarks bar, or copy and paste the code into a new bookmark.
-      .col-xs-8.col-xs-offset-4
+      .col-xs-12
         form.form-horizontal
           .form-group
             label.col-xs-4 Send attendance to:
-            .col-xs-4
+            .col-xs-8
               input#emailto.form-control(type='email')
           .form-group
             label.col-xs-4 Your email address for record keeping:
-            .col-xs-4
+            .col-xs-8
               input#youremail.form-control(type='email')
           .form-group
-            .col-xs-offset-4.col-xs-8
-              button.btn.btn-primary(type='submit') Submit
+            button.btn.btn-primary.btn-lg.pull-right(type='submit') Submit
       .col-xs-12#code-show
-        h4
+        h5
           | The codes generated below will automatically generate an email in your default email provider with the absent/late students already typed and ready to send.
         ul.nav.nav-tabs.nav-justified
           li.active(role='presentation')
@@ -37,12 +36,12 @@ block content
             a(href='#late', data-toggle='tab') Bookmarklet: Late
         .tab-content
           #absent.tab-pane.fade.active.in(role='tabpanel')
-            h4
+            h5
               | Drag this button onto your toolbar:
               a#absent-btn.btn.btn-info ClassDojo Absents
             pre.
           #late.tab-pane.fade(role='tabpanel')
-            h4
+            h5
               | Drag this button onto your toolbar:
               a#late-btn.btn.btn-info ClassDojo Lates
             pre.

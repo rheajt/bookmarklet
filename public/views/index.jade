@@ -1,13 +1,11 @@
 extends layout
 
 block content
-  .container
-    .jumbotron
-      h1.text-center= title
-
-      .row
-        .col-sm-4
-          .thumbnail.page-content
-            a(href="/attendance")
-              img(src="images/ClassDojo.jpg").img-responsive.img-rounded
-              h2.text-center ClassDojo Attendance
+  .jumbotron
+    .row
+      .h1 Bookmarklets
+      .col-sm-4
+        .thumbnail.text-center
+          a(href="/attendance")
+            img(src="images/ClassDojo.jpg").img-responsive.img-rounded
+            h2.text-muted ClassDojo Attendance
