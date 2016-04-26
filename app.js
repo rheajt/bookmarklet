@@ -4,6 +4,7 @@ var express = require('express'),
 //var routes = require('./routes/index');
 
 var app = express();
+var port = process.env.PORT || 8080;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'public/views'));
@@ -20,6 +21,6 @@ app.get('/:pagePath', function(req, res) {
   res.render(req.params.pagePath);
 });
 
-app.listen(8080, function() {
-  console.log('listening for bookmarklets on port 8080...');
+app.listen(port, function() {
+  console.log('listening for bookmarklets on port ' + port + '...');
 });
